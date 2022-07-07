@@ -104,6 +104,7 @@ data "aws_iam_policy_document" "cicd_ecr" {
       "ecr:InitiateLayerUpload",
       "ecr:ListImages",
       "ecr:PutImage",
+      "ecr:SetRepositoryPolicy",
       "ecr:UploadLayerPart",
     ]
     resources = [
