@@ -96,6 +96,7 @@ data "aws_iam_policy_document" "cicd_ecr" {
       "ecr:BatchCheckLayerAvailability",
       "ecr:BatchGetImage",
       "ecr:CompleteLayerUpload",
+      "ecr:CreateRepository",
       "ecr:DescribeImages",
       "ecr:DescribeRepositories",
       "ecr:GetAuthorizationToken",
