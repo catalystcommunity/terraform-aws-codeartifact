@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/catalystsquad/terraform-aws-codeartifact/compare/v1.0.1...v1.0.2) (2022-08-09)
+
+
+### Bug Fixes
+
+* add ecr create repository action ([#4](https://github.com/catalystsquad/terraform-aws-codeartifact/issues/4)) ([bbb4269](https://github.com/catalystsquad/terraform-aws-codeartifact/commit/bbb4269d140a6e7616f7bac84d48715e544e1e72))
+
 ## [1.0.1](https://github.com/catalystsquad/terraform-aws-codeartifact/compare/v1.0.0...v1.0.1) (2022-07-07)
 
 
