@@ -20,7 +20,7 @@ The most basic implementation creates all necessary resources for managing an
 NPM repository.
 ```terraform
 module "codeartifact" {
-  source = "github.com/catalystsquad/terraform-aws-codeartifact"
+  source = "github.com/catalystcommunity/terraform-aws-codeartifact"
 
   enable_codeartifact_domain_kms_key = true
   codeartifact_domain_name           = "mydomain"
@@ -31,7 +31,7 @@ module "codeartifact" {
 
 ```terraform
 module "codeartifact" {
-  source = "github.com/catalystsquad/terraform-aws-codeartifact"
+  source = "github.com/catalystcommunity/terraform-aws-codeartifact"
 
   enable_codeartifact_domain_kms_key = true
   codeartifact_domain_name           = "mydomain"
