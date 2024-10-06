@@ -52,6 +52,14 @@ resource "aws_codeartifact_repository" "repository" {
       external_connection_name = external_connections.value.external_connection_name
     }
   }
+
+  dynamic "upstream" {
+    for_each = var.codeartifact_repositories[count.index].upstreams != null ? var.codeartifact_repositories[count.index].upstreams : []
+
+    content {
+      repository_name = upstream.value.upstream_repository_name
+    }
+  }
 }
 
 # CICD role with access to codeartifact and ecr
