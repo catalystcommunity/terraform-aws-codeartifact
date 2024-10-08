@@ -35,6 +35,9 @@ variable "codeartifact_repositories" {
     external_connections = list(object({
       external_connection_name = string
     }))
+    upstreams = optional(list(object({
+      upstream_repository_name = string
+    })))
   }))
   default = [
     {
