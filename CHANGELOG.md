@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/catalystcommunity/terraform-aws-codeartifact/compare/v2.0.0...v2.1.0) (2024-10-09)
+
+
+### Bug Fixes
+
+* move to catalystcommunity ([dec9c3e](https://github.com/catalystcommunity/terraform-aws-codeartifact/commit/dec9c3ef81a34035dc7dcc3d59c05a9fc52b006c))
+
+
+### Features
+
+* get release going for added upstream ([#11](https://github.com/catalystcommunity/terraform-aws-codeartifact/issues/11)) ([664e012](https://github.com/catalystcommunity/terraform-aws-codeartifact/commit/664e0122c3f1ac98c556b7480ca8d26428115b8d))
+* upstream support ([#10](https://github.com/catalystcommunity/terraform-aws-codeartifact/issues/10)) ([c812c5b](https://github.com/catalystcommunity/terraform-aws-codeartifact/commit/c812c5bbf2b7be654ddd52439afa612a936c7303))
+
 # [2.0.0](https://github.com/catalystcommunity/terraform-aws-codeartifact/compare/v1.0.2...v2.0.0) (2024-01-03)
 
 ## [1.0.2](https://github.com/catalystcommunity/terraform-aws-codeartifact/compare/v1.0.1...v1.0.2) (2022-08-09)
