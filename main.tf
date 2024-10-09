@@ -161,3 +161,4 @@ resource "aws_iam_role" "cicd_role" {
     policy = data.aws_iam_policy_document.cicd_ecr[count.index].json
   }
 }
+
