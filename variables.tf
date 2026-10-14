@@ -21,6 +21,12 @@ variable "codeartifact_domain_name" {
   type        = string
 }
 
+variable "codeartifact_domain_permissions_policy" {
+  description = "JSON policy document to apply to the CodeArtifact domain. Set to null to leave the domain permissions policy unmanaged."
+  type        = string
+  default     = null
+}
+
 variable "codeartifact_domain_kms_key_arn" {
   description = "CodeArtifact domain KMS key to use if var.enable_codeartifact_domain_kms_key is disabled"
   type        = string

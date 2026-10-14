@@ -29,6 +29,13 @@ resource "aws_codeartifact_domain" "domain" {
   tags           = var.tags
 }
 
+resource "aws_codeartifact_domain_permissions_policy" "domain" {
+  count = var.codeartifact_domain_permissions_policy != null ? 1 : 0
+
+  domain          = local.domain
+  policy_document = var.codeartifact_domain_permissions_policy
+}
+
 # create repositories
 locals {
   domain = (
@@ -161,4 +168,3 @@ resource "aws_iam_role" "cicd_role" {
     policy = data.aws_iam_policy_document.cicd_ecr[count.index].json
   }
 }
-
