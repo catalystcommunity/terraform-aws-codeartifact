@@ -29,13 +29,6 @@ resource "aws_codeartifact_domain" "domain" {
   tags           = var.tags
 }
 
-resource "aws_codeartifact_domain_permissions_policy" "domain" {
-  count = var.codeartifact_domain_permissions_policy != null ? 1 : 0
-
-  domain          = local.domain
-  policy_document = var.codeartifact_domain_permissions_policy
-}
-
 # create repositories
 locals {
   domain = (
@@ -43,6 +36,23 @@ locals {
     one(aws_codeartifact_domain.domain[*].domain) :
     var.codeartifact_domain_name
   )
+}
+
+resource "aws_codeartifact_domain_permissions_policy" "domain" {
+  count = var.enable_codeartifact_domain_permissions_policy ? 1 : 0
+
+  domain          = local.domain
+  domain_owner    = var.codeartifact_domain_owner
+  policy_document = var.codeartifact_domain_permissions_policy
+
+  lifecycle {
+    precondition {
+      condition     = var.codeartifact_domain_permissions_policy != null
+      error_message = "Set var.codeartifact_domain_permissions_policy when var.enable_codeartifact_domain_permissions_policy is true."
+    }
+
+    replace_triggered_by = [aws_codeartifact_domain.domain]
+  }
 }
 
 resource "aws_codeartifact_repository" "repository" {

@@ -21,8 +21,25 @@ variable "codeartifact_domain_name" {
   type        = string
 }
 
+variable "enable_codeartifact_domain_permissions_policy" {
+  description = "Whether to manage a permissions policy on the CodeArtifact domain. Changing this from true to false deletes the policy"
+  type        = bool
+  default     = false
+}
+
 variable "codeartifact_domain_permissions_policy" {
-  description = "JSON policy document to apply to the CodeArtifact domain. Set to null to leave the domain permissions policy unmanaged."
+  description = "JSON policy document to apply to the CodeArtifact domain if var.enable_codeartifact_domain_permissions_policy is enabled"
+  type        = string
+  default     = null
+
+  validation {
+    condition     = var.codeartifact_domain_permissions_policy == null || can(jsondecode(var.codeartifact_domain_permissions_policy))
+    error_message = "The codeartifact_domain_permissions_policy value must be a valid JSON policy document."
+  }
+}
+
+variable "codeartifact_domain_owner" {
+  description = "Account ID that owns the CodeArtifact domain. Defaults to the current account"
   type        = string
   default     = null
 }
