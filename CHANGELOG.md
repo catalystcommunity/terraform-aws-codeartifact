@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/catalystcommunity/terraform-aws-codeartifact/compare/v2.1.0...v2.2.0) (2026-10-26)
+
+
+### Features
+
+* improve CodeArtifact domain policy management ([10bf841](https://github.com/catalystcommunity/terraform-aws-codeartifact/commit/10bf841c53f5b479d5d7b398c114175898db6e6c))
+* support CodeArtifact domain permissions policies ([d386b58](https://github.com/catalystcommunity/terraform-aws-codeartifact/commit/d386b581699f52a135d49a9e88fb16d12cebad39))
+
 # [2.1.0](https://github.com/catalystcommunity/terraform-aws-codeartifact/compare/v2.0.0...v2.1.0) (2024-10-09)
 
 
